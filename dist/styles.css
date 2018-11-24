@@ -4,6 +4,7 @@
 /*Variables*/
 /*Mixins*/
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,20 +17,24 @@ body {
 
 .site-home {
   height: 100vh;
-  background: url("./images/bulgaria-balkans-mountains-min.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url("../images/bulgaria-balkans-mountains-min.jpg") no-repeat center center fixed;
   background-size: cover;
   text-align: center;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .site-header {
   width: 100%; }
 
 .site-nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-decoration: none;
   margin: 0 auto;
@@ -73,7 +78,7 @@ body {
   text-shadow: 1px 1px 6px #000;
   font-weight: 300; }
 
-.gradient-btn {
+.gradient-btn, .read-more, .submit {
   font-family: Lato, serif;
   display: inline-block;
   padding: 1em 2em;
@@ -85,14 +90,21 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(139, 221, 241, 0)), color-stop(75%, rgba(139, 221, 241, 0.8)));
+  background: -webkit-linear-gradient(left, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
+  background: -o-linear-gradient(left, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
   background: linear-gradient(to right, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
   background-position: 1% 50%;
   background-size: 400% 300%;
   border: 1px solid #8BDDF1;
+  -webkit-transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1);
+  -o-transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1);
   transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1); }
-  .gradient-btn:hover {
+  .gradient-btn:hover, .read-more:hover, .submit:hover {
+    -webkit-transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1);
+    -o-transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1);
     transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1); }
-  .gradient-btn:hover {
+  .gradient-btn:hover, .read-more:hover, .submit:hover {
     color: #fff;
     background-position: 99% 50%; }
 
@@ -109,21 +121,32 @@ body {
   text-shadow: 1px 1px 6px #000; }
 
 .gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 80%;
   margin: 0 auto 6rem;
   padding: 2rem 0.5rem 0; }
 
 .gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50%;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .first {
   width: 500px;
   height: 500px;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
   flex-grow: 2;
   margin: 0 6px 6px 0; }
   .first img {
@@ -136,6 +159,8 @@ body {
 .second, .third, .fourth, .fifth {
   width: 250px;
   height: 250px;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
   flex-grow: 2;
   margin: 0 6px 6px 0; }
   .second img, .third img, .fourth img, .fifth img {
@@ -146,10 +171,17 @@ body {
       opacity: 0.8; }
 
 .site-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
-  padding: 1rem 2rem; }
+  padding: 2rem 2rem;
+  margin: 3rem 0; }
 
 .about-picture-container {
   width: 60%; }
@@ -176,46 +208,123 @@ body {
   padding: 1rem 0;
   color: #fff; }
 
-.read-more {
-  font-family: Lato, serif;
-  display: inline-block;
-  padding: 1em 2em;
-  border-radius: 0;
+.site-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(25, 25, 5, 0.7)), color-stop(0, transparent)), url("../images/ovech-21014d2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff; }
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000;
   color: #fff;
-  margin-top: 2rem;
-  font-weight: bold;
-  font-size: 0.678rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  margin-bottom: 1.5rem; }
+
+.get-in-touch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto; }
+
+.input-email, .input-name, .input-text {
+  background: transparent;
+  border: none;
+  padding: 1.2rem;
+  color: #fff;
+  font-size: 1rem;
+  border-bottom: 1px solid #fff;
+  font-family: Lato, serif;
+  resize: none; }
+
+footer {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.site-footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
-  background: linear-gradient(to right, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
-  background-position: 1% 50%;
-  background-size: 400% 300%;
-  border: 1px solid #8BDDF1;
-  transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1); }
-  .read-more:hover {
-    transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1); }
-  .read-more:hover {
-    color: #fff;
-    background-position: 99% 50%; }
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  height: 4rem;
+  padding: 1rem 0;
+  width: 80%; }
+
+.site-footer-menu li {
+  text-decoration: none;
+  margin: 0 auto; }
+
+.site-footer-menu li a {
+  color: #fff;
+  font-family: Lato, serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+  margin: 0 auto;
+  text-shadow: 1px 1px 6px #000; }
+  .site-footer-menu li a:hover {
+    color: #8BDDF1; }
+
+.fa-compass {
+  font-size: 2.1rem;
+  margin: -10px 0px 0px 0px; }
 
 /*Media Queries*/
 @media (max-width: 600px) {
-  .site-nav-menu {
+  .site-nav-menu, .site-footer-menu {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 1rem 0 0.2rem; }
-    .site-nav-menu :nth-child(3) {
+    .site-nav-menu :nth-child(3), .site-footer-menu :nth-child(3) {
       display: none; }
 
   .site-nav-menu li a {
     padding: 1rem 0; } }
 @media (max-width: 800px) {
   .gallery-grid {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0 auto;
     width: 100%; }
 
   .gallery-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .first {
@@ -223,6 +332,9 @@ body {
     height: 250px; }
 
   .site-about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .about-picture-container {
