@@ -97,11 +97,10 @@ body {
     background-position: 99% 50%; }
 
 .site-gallery {
-  height: 100vh;
   border-top: 2px solid #BF5756; }
 
 .gallery-title {
-  margin: 4rem 0 0;
+  margin: 6rem 0 0;
   font-size: 2.5rem;
   text-align: center;
   font-weight: 300;
@@ -114,7 +113,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
   padding: 2rem 0.5rem 0; }
 
 .gallery-grid {
@@ -153,17 +152,52 @@ body {
   padding: 1rem 2rem; }
 
 .about-picture-container {
-  width: 50%; }
+  width: 60%; }
 
 .about-picture {
-  width: 50%;
+  width: 100%;
   height: auto; }
 
 .about-text-container {
-  width: 50%; }
+  width: 40%;
+  text-align: right;
+  margin: 5rem 0 0 0; }
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000;
+  color: #fff;
+  margin-bottom: 1.5rem; }
 
 .about-text {
+  border-top: 1px solid #ccc;
+  padding: 1rem 0;
   color: #fff; }
+
+.read-more {
+  font-family: Lato, serif;
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0;
+  color: #fff;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.678rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to right, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
+  background-position: 1% 50%;
+  background-size: 400% 300%;
+  border: 1px solid #8BDDF1;
+  transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1); }
+  .read-more:hover {
+    transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1); }
+  .read-more:hover {
+    color: #fff;
+    background-position: 99% 50%; }
 
 /*Media Queries*/
 @media (max-width: 600px) {
@@ -186,9 +220,22 @@ body {
 
   .first {
     width: 250px;
-    height: 250px; } }
+    height: 250px; }
+
+  .site-about {
+    flex-direction: column; }
+
+  .about-picture-container {
+    width: 100%; }
+
+  .about-text-container {
+    width: 100%;
+    text-align: center; } }
 @media (max-width: 1268px) {
   .gallery-grid {
-    width: 100%; } }
+    width: 100%; }
+
+  .about-text-container {
+    margin: 1rem 0 0 0; } }
 
 /*# sourceMappingURL=styles.css.map */

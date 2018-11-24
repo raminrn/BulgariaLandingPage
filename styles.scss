@@ -127,13 +127,12 @@ body {
 }
 
 .site-gallery {
-  height: 100vh;
   border-top: 2px solid #BF5756;
 }
 
 
 .gallery-title{
-  margin: 4rem 0 0;
+  margin: 6rem 0 0;
   font-size: 2.5rem;
   text-align: center;
   font-weight: 300;
@@ -147,7 +146,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
   padding: 2rem 0.5rem 0;
 }
 
@@ -197,20 +196,57 @@ body {
 }
 
 .about-picture-container{
-  width: 50%;
+  width: 60%;
 }
 
 .about-picture{
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 
 .about-text-container{
-  width: 50%;
+  width: 40%;
+  text-align: right;
+  margin: 5rem 0 0 0;
+}
+
+.about-title{
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: $font-text;
+  text-shadow: $text-shadow;
+  color: $white;
+  margin-bottom: 1.5rem;
 }
 
 .about-text{
+  border-top: 1px solid #ccc;
+  padding: 1rem 0;
   color: $white;
+}
+
+.read-more{
+  font-family: $font-titles;
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0;
+  color: $white;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.678rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to right, rgba($blue, 0) 25%, rgba($blue, .8) 75%);
+  background-position: 1% 50%;
+  background-size: 400% 300%;
+  border: 1px solid $blue;
+  @include transition;
+
+  &:hover {
+    color: $white;
+    background-position: 99% 50%;
+  }
 }
 
 /*Media Queries*/
@@ -249,11 +285,28 @@ body {
     width: 250px;
     height: 250px;
   }
+
+  .site-about{
+    flex-direction: column;
+  }
+
+  .about-picture-container{
+    width: 100%;
+  }
+
+  .about-text-container{
+    width: 100%;
+    text-align: center;
+  }
 }
 
 
 @media (max-width: 1268px) {
   .gallery-grid {
     width: 100%;
+  }
+
+  .about-text-container{
+    margin: 1rem 0 0 0;
   }
 }
