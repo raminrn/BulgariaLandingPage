@@ -1,0 +1,233 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Tinos');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*Variables*/
+$font-titles: Lato, serif;
+$font-text: Tinos, serif;
+$white: #fff;
+$blue: #8BDDF1;
+$black: #000;
+$text-shadow: 1px 1px 6px $black;
+$ease-out: cubic-bezier(0.123, 0.65, 0.74, 1);
+
+/*Mixins*/
+@mixin transition() {
+  transition: 700ms $ease-out;
+
+  &:hover {
+    transition: 400ms $ease-out;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $black;
+  border-top: 2px solid $white;
+}
+
+.site-home {
+  height: 100vh;
+  background: url("./images/bulgaria-balkans-mountains-min.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  width: 100%;
+}
+
+.site-nav-menu {
+  display: flex;
+  text-decoration: none;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  height: 4rem;
+  padding: 3rem 0;
+  width: 80%;
+}
+
+.site-nav-menu li {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.site-nav-menu li a {
+  color: $white;
+  font-family: $font-titles;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+  margin: 0 auto;
+  text-shadow: $text-shadow;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.fa-compass {
+  font-size: 2.1rem;
+  margin: -10px 0px 0px 0px;
+}
+
+.site-heading {
+  margin-top: 12rem;
+}
+
+.site-title {
+  font-size: 4rem;
+  font-weight: 300;
+  font-family: $font-text;
+  text-shadow: $text-shadow;
+}
+
+.site-undertitle {
+  font-size: 1.2rem;
+  text-shadow: $text-shadow;
+  font-weight: 300;
+}
+
+.gradient-btn {
+  font-family: $font-titles;
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0;
+  color: $white;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.678rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to right, rgba($blue, 0) 25%, rgba($blue, .8) 75%);
+  background-position: 1% 50%;
+  background-size: 400% 300%;
+  border: 1px solid $blue;
+  @include transition;
+
+  &:hover {
+    color: $white;
+    background-position: 99% 50%;
+  }
+}
+
+.site-gallery {
+  height: 100vh;
+  border-top: 2px solid #BF5756;
+}
+
+
+.gallery-title{
+  margin: 4rem 0 0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 300;
+  color: $white;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0.5rem 0;
+}
+
+.gallery-grid {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.first {
+  width: 500px;
+  height: 500px;
+  flex-grow: 2;
+  margin: 0 6px 6px 0;
+  & img {
+    width: 100%;
+    height: inherit;
+    background-size: 250px 250px, contain;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.second, .third, .fourth, .fifth {
+  width: 250px;
+  height: 250px;
+  flex-grow: 2;
+  margin: 0 6px 6px 0;
+  & img {
+    width: 100%;
+    height: inherit;
+    background-size: 100px 100px, contain;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/*Media Queries*/
+@media (max-width: 600px) {
+  .site-nav-menu {
+    flex-wrap: wrap;
+    padding: 1rem 0 0.2rem;
+    & :nth-child(3) {
+      display: none;
+    }
+  }
+
+  .site-nav-menu li a {
+    padding: 1rem 0;
+  }
+
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+
+  }
+
+  .first {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+@media (max-width: 1268px) {
+  .gallery-grid {
+    width: 100%;
+  }
+}

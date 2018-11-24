@@ -1,0 +1,175 @@
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Tinos");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+/*Variables*/
+/*Mixins*/
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #000;
+  border-top: 2px solid #fff; }
+
+.site-home {
+  height: 100vh;
+  background: url("./images/bulgaria-balkans-mountains-min.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column; }
+
+.site-header {
+  width: 100%; }
+
+.site-nav-menu {
+  display: flex;
+  text-decoration: none;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  height: 4rem;
+  padding: 3rem 0;
+  width: 80%; }
+
+.site-nav-menu li {
+  text-decoration: none;
+  margin: 0 auto; }
+
+.site-nav-menu li a {
+  color: #fff;
+  font-family: Lato, serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+  margin: 0 auto;
+  text-shadow: 1px 1px 6px #000; }
+  .site-nav-menu li a:hover {
+    color: #8BDDF1; }
+
+.fa-compass {
+  font-size: 2.1rem;
+  margin: -10px 0px 0px 0px; }
+
+.site-heading {
+  margin-top: 12rem; }
+
+.site-title {
+  font-size: 4rem;
+  font-weight: 300;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000; }
+
+.site-undertitle {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 6px #000;
+  font-weight: 300; }
+
+.gradient-btn {
+  font-family: Lato, serif;
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0;
+  color: #fff;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.678rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to right, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
+  background-position: 1% 50%;
+  background-size: 400% 300%;
+  border: 1px solid #8BDDF1;
+  transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1); }
+  .gradient-btn:hover {
+    transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1); }
+  .gradient-btn:hover {
+    color: #fff;
+    background-position: 99% 50%; }
+
+.site-gallery {
+  height: 100vh;
+  border-top: 2px solid #BF5756; }
+
+.gallery-title {
+  margin: 4rem 0 0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000; }
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0.5rem 0; }
+
+.gallery-grid {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap; }
+
+.first {
+  width: 500px;
+  height: 500px;
+  flex-grow: 2;
+  margin: 0 6px 6px 0; }
+  .first img {
+    width: 100%;
+    height: inherit;
+    background-size: 250px 250px, contain; }
+    .first img:hover {
+      opacity: 0.8; }
+
+.second, .third, .fourth, .fifth {
+  width: 250px;
+  height: 250px;
+  flex-grow: 2;
+  margin: 0 6px 6px 0; }
+  .second img, .third img, .fourth img, .fifth img {
+    width: 100%;
+    height: inherit;
+    background-size: 100px 100px, contain; }
+    .second img:hover, .third img:hover, .fourth img:hover, .fifth img:hover {
+      opacity: 0.8; }
+
+/*Media Queries*/
+@media (max-width: 600px) {
+  .site-nav-menu {
+    flex-wrap: wrap;
+    padding: 1rem 0 0.2rem; }
+    .site-nav-menu :nth-child(3) {
+      display: none; }
+
+  .site-nav-menu li a {
+    padding: 1rem 0; } }
+@media (max-width: 800px) {
+  .gallery-grid {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%; }
+
+  .gallery-container {
+    flex-direction: column; }
+
+  .first {
+    width: 250px;
+    height: 250px; } }
+@media (max-width: 1268px) {
+  .gallery-grid {
+    width: 100%; } }
+
+/*# sourceMappingURL=styles.css.map */
