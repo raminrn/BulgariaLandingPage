@@ -146,6 +146,25 @@ body {
     .second img:hover, .third img:hover, .fourth img:hover, .fifth img:hover {
       opacity: 0.8; }
 
+.site-about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 1rem 2rem; }
+
+.about-picture-container {
+  width: 50%; }
+
+.about-picture {
+  width: 50%;
+  height: auto; }
+
+.about-text-container {
+  width: 50%; }
+
+.about-text {
+  color: #fff; }
+
 /*Media Queries*/
 @media (max-width: 600px) {
   .site-nav-menu {
