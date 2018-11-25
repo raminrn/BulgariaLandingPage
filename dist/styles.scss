@@ -61,7 +61,7 @@ body {
 
 .site-home {
   height: 100vh;
-  background: url("../images/bulgaria-balkans-mountains-min.jpg") no-repeat center center fixed;
+  background: url("../images/bulgaria-balkans-mountains-min.png") no-repeat center center fixed;
   background-size: cover;
   text-align: center;
   color: $white;
@@ -271,7 +271,7 @@ body {
   text-align: center;
   height: 100vh;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(25, 25, 5, .7)), color-stop(0, transparent)), url("../images/ovech-21014d2.jpg") no-repeat center center fixed;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(25, 25, 5, .7)), color-stop(0, transparent)), url("../images/ovech-21014d2.png") no-repeat center center fixed;
   background-size: cover;
   color: $white;
 }
