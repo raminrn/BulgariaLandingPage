@@ -272,8 +272,12 @@ body {
   height: 100vh;
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(25, 25, 5, .7)), color-stop(0, transparent)), url("../images/ovech-21014d2.png") no-repeat center center fixed;
-  background-size: cover;
+  background-size: auto;
   color: $white;
+}
+
+.site-contact{
+  background-attachment: scroll;
 }
 
 .contact-title {
@@ -404,6 +408,11 @@ footer {
     width: 100%;
     text-align: center;
   }
+
+  .site-contact{
+    background-attachment: initial;
+  }
+
 }
 
 @media (max-width: 1268px) {
