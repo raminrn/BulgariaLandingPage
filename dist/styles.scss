@@ -310,7 +310,7 @@ body {
 //Footer
 footer {
   @include flex;
-  @include flex-row
+  @include flex-row;
   position: absolute;
   margin-left: auto;
   margin-right: auto;

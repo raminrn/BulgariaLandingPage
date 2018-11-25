@@ -1,74 +1,348 @@
-/*
-Error: Undefined mixin 'flex-direction'.
-        on line 69 of styles.scss, in `flex-direction'
-        from line 69 of styles.scss
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Tinos");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+/*Variables*/
+/*Mixins*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0; }
 
-64:   background: url("../images/bulgaria-balkans-mountains-min.jpg") no-repeat center center fixed;
-65:   background-size: cover;
-66:   text-align: center;
-67:   color: $white;
-68:   @include flex;
-69:   @include flex-direction;
-70: }
-71: 
-72: .site-header {
-73:   width: 100%;
-74: }
+body {
+  background: #000;
+  border-top: 2px solid #fff; }
 
-Backtrace:
-styles.scss:69:in `flex-direction'
-styles.scss:69
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/bin/scss:13:in `<top (required)>'
-C:/Ruby24-x64/bin/scss:23:in `load'
-C:/Ruby24-x64/bin/scss:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'flex-direction'.\A         on line 69 of styles.scss, in `flex-direction'\A         from line 69 of styles.scss\A \A 64:   background: url(\"../images/bulgaria-balkans-mountains-min.jpg\") no-repeat center center fixed;\A 65:   background-size: cover;\A 66:   text-align: center;\A 67:   color: $white;\A 68:   @include flex;\A 69:   @include flex-direction;\A 70: }\A 71: \A 72: .site-header {\A 73:   width: 100%;\A 74: }"; }
+.site-home {
+  height: 100vh;
+  background: url("../images/bulgaria-balkans-mountains-min.jpg") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.site-header {
+  width: 100%; }
+
+.site-nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  height: 4rem;
+  padding: 3rem 0;
+  width: 80%; }
+
+.site-nav-menu li {
+  text-decoration: none;
+  margin: 0 auto; }
+
+.site-nav-menu li a {
+  color: #fff;
+  font-family: Lato, serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+  margin: 0 auto;
+  text-shadow: 1px 1px 6px #000; }
+  .site-nav-menu li a:hover {
+    color: #8BDDF1; }
+
+.fa-compass {
+  font-size: 2.1rem;
+  margin: -10px 0px 0px 0px; }
+
+.site-heading {
+  margin-top: 12rem; }
+
+.site-title {
+  font-size: 4rem;
+  font-weight: 300;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000; }
+
+.site-undertitle {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 6px #000;
+  font-weight: 300; }
+
+.gradient-btn, .read-more, .submit {
+  font-family: Lato, serif;
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0;
+  color: #fff;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.678rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(139, 221, 241, 0)), color-stop(75%, rgba(139, 221, 241, 0.8)));
+  background: -webkit-linear-gradient(left, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
+  background: -o-linear-gradient(left, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
+  background: linear-gradient(to right, rgba(139, 221, 241, 0) 25%, rgba(139, 221, 241, 0.8) 75%);
+  background-position: 1% 50%;
+  background-size: 400% 300%;
+  border: 1px solid #8BDDF1;
+  -webkit-transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1);
+  -o-transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1);
+  transition: 700ms cubic-bezier(0.123, 0.65, 0.74, 1); }
+  .gradient-btn:hover, .read-more:hover, .submit:hover {
+    -webkit-transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1);
+    -o-transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1);
+    transition: 400ms cubic-bezier(0.123, 0.65, 0.74, 1); }
+  .gradient-btn:hover, .read-more:hover, .submit:hover {
+    color: #fff;
+    background-position: 99% 50%; }
+
+.site-gallery {
+  border-top: 2px solid #BF5756; }
+
+.gallery-title {
+  margin: 6rem 0 0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000; }
+
+.gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto 6rem;
+  padding: 2rem 0.5rem 0; }
+
+.gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.first {
+  width: 500px;
+  height: 500px;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  margin: 0 6px 6px 0; }
+  .first img {
+    width: 100%;
+    height: inherit;
+    background-size: 250px 250px, contain; }
+    .first img:hover {
+      opacity: 0.8; }
+
+.second, .third, .fourth, .fifth {
+  width: 250px;
+  height: 250px;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  margin: 0 6px 6px 0; }
+  .second img, .third img, .fourth img, .fifth img {
+    width: 100%;
+    height: inherit;
+    background-size: 100px 100px, contain; }
+    .second img:hover, .third img:hover, .fourth img:hover, .fifth img:hover {
+      opacity: 0.8; }
+
+.site-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 2rem 2rem;
+  margin: 3rem 0; }
+
+.about-picture-container {
+  width: 60%; }
+
+.about-picture {
+  width: 100%;
+  height: auto; }
+
+.about-text-container {
+  width: 40%;
+  text-align: right;
+  margin: 5rem 0 0 0; }
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000;
+  color: #fff;
+  margin-bottom: 1.5rem; }
+
+.about-text {
+  border-top: 1px solid #ccc;
+  padding: 1rem 0;
+  color: #fff; }
+
+.site-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(25, 25, 5, 0.7)), color-stop(0, transparent)), url("../images/ovech-21014d2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff; }
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: Tinos, serif;
+  text-shadow: 1px 1px 6px #000;
+  color: #fff;
+  margin-bottom: 1.5rem; }
+
+.get-in-touch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto; }
+
+.input-email, .input-name, .input-text {
+  background: transparent;
+  border: none;
+  padding: 1.2rem;
+  color: #fff;
+  font-size: 1rem;
+  border-bottom: 1px solid #fff;
+  font-family: Lato, serif;
+  resize: none; }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.site-footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  height: 4rem;
+  padding: 1rem 0;
+  width: 80%; }
+
+.site-footer-menu li {
+  text-decoration: none;
+  margin: 0 auto; }
+
+.site-footer-menu li a {
+  color: #fff;
+  font-family: Lato, serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+  margin: 0 auto;
+  text-shadow: 1px 1px 6px #000; }
+  .site-footer-menu li a:hover {
+    color: #8BDDF1; }
+
+.fa-compass {
+  font-size: 2.1rem;
+  margin: -10px 0px 0px 0px; }
+
+/*Media Queries*/
+@media (max-width: 600px) {
+  .site-nav-menu, .site-footer-menu {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 1rem 0 0.2rem; }
+    .site-nav-menu :nth-child(3), .site-footer-menu :nth-child(3) {
+      display: none; }
+
+  .site-nav-menu li a {
+    padding: 1rem 0; } }
+@media (max-width: 800px) {
+  .gallery-grid {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%; }
+
+  .gallery-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
+  .first {
+    width: 250px;
+    height: 250px; }
+
+  .site-about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
+  .about-picture-container {
+    width: 100%; }
+
+  .about-text-container {
+    width: 100%;
+    text-align: center; } }
+@media (max-width: 1268px) {
+  .gallery-grid {
+    width: 100%; }
+
+  .about-text-container {
+    margin: 1rem 0 0 0; } }
+
+/*# sourceMappingURL=styles.css.map */
