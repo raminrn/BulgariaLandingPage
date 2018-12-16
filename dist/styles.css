@@ -13,7 +13,15 @@
 
 body {
   background: #000;
-  border-top: 2px solid #fff; }
+  border-top: 2px solid #fff;
+  min-width: 300px; }
+
+hr {
+  width: 250px;
+  height: 3px;
+  background-color: #8BDDF1;
+  border: 0;
+  margin: 30px auto; }
 
 .site-home {
   height: 100vh;
@@ -120,6 +128,11 @@ body {
   font-family: Tinos, serif;
   text-shadow: 1px 1px 6px #000; }
 
+.gallery-text {
+  color: #fff;
+  padding: 0 1rem;
+  text-align: center; }
+
 .gallery-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,6 +217,9 @@ body {
   padding: 1rem 0;
   color: #fff; }
 
+.read-more {
+  cursor: pointer; }
+
 .site-contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -218,7 +234,7 @@ body {
   text-align: center;
   height: 100vh;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(25, 25, 5, 0.7)), color-stop(0, transparent)), url("../images/ovech-21014d2.png") no-repeat center center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #191905), color-stop(0, transparent)), url("../images/ovech-21014d2.png") no-repeat center center;
   background-size: cover;
   color: #fff; }
 
@@ -250,6 +266,9 @@ body {
   border-bottom: 1px solid #fff;
   font-family: Lato, serif;
   resize: none; }
+
+.submit {
+  cursor: pointer; }
 
 footer {
   display: -webkit-box;
@@ -325,12 +344,6 @@ footer {
   .first {
     width: 250px;
     height: 250px; }
-
-  .site-about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
 
   .about-picture-container {
     width: 100%; }

@@ -11,22 +11,21 @@ $black: #000;
 $text-shadow: 1px 1px 6px $black;
 $ease-out: cubic-bezier(0.123, 0.65, 0.74, 1);
 
-
 /*Mixins*/
-@mixin flex{
+@mixin flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@mixin flex-column{
+@mixin flex-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-@mixin flex-row{
+@mixin flex-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -57,6 +56,15 @@ $ease-out: cubic-bezier(0.123, 0.65, 0.74, 1);
 body {
   background: $black;
   border-top: 2px solid $white;
+  min-width: 300px;
+}
+
+hr {
+  width: 250px;
+  height: 3px;
+  background-color: #8BDDF1;
+  border: 0;
+  margin: 30px auto;
 }
 
 .site-home {
@@ -166,6 +174,12 @@ body {
   text-shadow: 1px 1px 6px #000;
 }
 
+.gallery-text{
+  color: $white;
+  padding: 0 1rem;
+  text-align: center;
+}
+
 .gallery-container {
   @include flex;
 
@@ -259,6 +273,7 @@ body {
 
 .read-more {
   @extend .gradient-btn;
+  cursor: pointer;
 }
 
 //Contact
@@ -271,7 +286,7 @@ body {
   text-align: center;
   height: 100vh;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(25, 25, 5, .7)), color-stop(0, transparent)), url("../images/ovech-21014d2.png") no-repeat center center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(25, 25, 5, 1)), color-stop(0, transparent)), url("../images/ovech-21014d2.png") no-repeat center center;
   background-size: cover;
   color: $white;
 }
@@ -305,6 +320,7 @@ body {
 
 .submit {
   @extend .gradient-btn;
+  cursor: pointer;
 }
 
 //Footer
@@ -392,9 +408,6 @@ footer {
     height: 250px;
   }
 
-  .site-about {
-    @include flex-column;
-  }
 
   .about-picture-container {
     width: 100%;
